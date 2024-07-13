@@ -1,0 +1,91 @@
+<div class="cartCard">
+    <p-card  subheader={{hallName}} [style]="{ width: '85%', margin: 'auto' }">
+        <ng-template pTemplate="header">
+            <p class="cartHeader" style="font-size: 30px;">CART 
+                <span style="color: white; margin-top: 0.3rem; font-size: 23px;" class="material-icons">shopping_cart</span>
+            </p>
+        </ng-template>
+        <div style="max-height: 25rem; overflow-y: auto;">
+            <div>
+                <p style="text-align: left; font-size: larger;">Subsidized Items </p>
+                <div *ngFor="let item of subsidizedItemsCart" 
+                    style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
+                    <p-inputNumber
+                        class="inputNumberClass"
+                        dir="ltr"
+                        [size]="1"
+                        [showButtons]="true"
+                        buttonLayout="horizontal"
+                        inputId="horizontal"
+                        spinnerMode="horizontal"
+                        [step]="1"
+                        decrementButtonClass="crtBtn"
+                        incrementButtonClass="crtBtn"
+                        incrementButtonIcon="pi pi-plus"
+                        decrementButtonIcon="pi pi-minus"
+                        [min]="1"
+                        [max]="10"
+                        [(ngModel)]="item.count"
+                        [disabled]="true"
+                        >
+                    </p-inputNumber>
+                    <p class="cartItemName">
+                          {{item.name}}  
+                    </p>
+                    <p class="cartItemPrice">
+                        {{item.price}} EGP
+                    </p>
+                    <div style="margin-top: auto; margin-bottom: auto">
+                        <p-button (onClick)="deleteItem(item.id, 'subsidized_cart')" icon="pi pi-trash" [text]="true" severity="danger" ></p-button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: left; font-size: larger;">Priced Items  </p>
+                <div *ngFor="let item of pricedItemsCart" style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
+                    <p-inputNumber
+                    class="inputNumberClass"
+                    dir="ltr"
+                    [size]="1"
+                    [showButtons]="true"
+                    buttonLayout="horizontal"
+                    inputId="horizontal"
+                    spinnerMode="horizontal"
+                    [step]="1"
+                    decrementButtonClass="crtBtn"
+                    incrementButtonClass="crtBtn"
+                    incrementButtonIcon="pi pi-plus"
+                    decrementButtonIcon="pi pi-minus"
+                    [min]="1"
+                    [max]="10"
+                    [(ngModel)]="item.count"
+                    [allowEmpty]="false"
+                    >
+                </p-inputNumber>
+                <p class="cartItemName">
+                    {{item.name}}  
+                </p>
+                <p class="cartItemPrice">
+                    {{item.price}} EGP
+                </p>
+                <div style="margin-top: auto; margin-bottom: auto">
+                    <p-button (onClick)="deleteItem(item.id, 'priced_cart')" icon="pi pi-trash" [text]="true" severity="danger" ></p-button>
+                </div>
+                </div>
+            </div>
+        </div>
+            <ng-template pTemplate="footer">
+                <hr>
+                <div style="display: flex;">
+                    <p style="font-size: x-large; margin: auto;">
+                        Total 
+                    </p>
+                    <p style="font-size: x-large; margin: auto;">
+                        {{totalPrice}} EGP
+                    </p>
+                </div>
+                <hr>
+                <p-button label="CHECKOUT" severity="success" [style]="{'width': '100%','font-size': 'larger'}" />
+        </ng-template>
+    </p-card>
+</div>

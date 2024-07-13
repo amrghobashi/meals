@@ -1,0 +1,35 @@
+<div class="card flex justify-content-center">
+    <div *ngFor="let itemType of itemTypes">
+        <p-fieldset legend="{{ itemType.name }}" [toggleable]="true" [style]="{'text-align': 'left'}">
+            <div class="card flex justify-content-center">
+                <div class="flex flex-column gap-2">
+                    <div *ngFor="let item of items" class="field-checkbox">
+                        <div *ngIf="item.item_type_id == itemType.id">
+                            <div class="itemCard">
+                                <div class="card flex justify-content-center">
+                                    <p-image src="{{ item.img }}" alt="Image" height="75" width="75" [preview]="true"></p-image>
+                                </div>
+                                <div style="padding: 0.5rem; width: 50%;">
+                                    <div class="text-3xl font-medium text-900 mb-3" style="font-size: larger;">{{item.item_name}} </div>
+                                    <div class="font-medium text-500 mb-3" style="color: #868687; font-size: medium;">{{ item.desc | slice:0:150 }}</div>
+                                </div>
+                                <div style="margin-top: auto; margin-bottom: auto;">
+                                    <p style="width: 6rem; margin-right: 2rem;">
+                                        {{item.price}} EGP
+                                    </p>
+                                </div>
+                                <div style="margin: auto;">
+                                    <p-button [style]="{'width': '2.2rem', 'height': '2.2rem'}" icon="pi pi-plus" [rounded]="true" severity="success"
+                                        (click)="addItem(item.id)">
+                                    </p-button>
+                                </div>
+                            </div>
+                            <hr color="#efefef">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </p-fieldset>
+    </div>
+</div>
