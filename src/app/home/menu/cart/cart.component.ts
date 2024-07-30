@@ -20,7 +20,7 @@ export class CartComponent {
   subscription!: Subscription;
   subsidizedItemsCart!: CartItem[];
   pricedItemsCart!: CartItem[];
-  hallName: string = "New Cairo Compound - Restaurant no. 1";
+  hallName: string = "Egypt Factory - Restaurant no. 1";
   itemValue: number = 10;
   totalPrice!: any;
   
