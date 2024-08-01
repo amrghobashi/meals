@@ -1,0 +1,51 @@
+// .p-card .p-card-body {
+//     padding: 0px !important;
+// }
+
+.cartHeader {
+    font-size: x-large;
+    background-color: #ff7b15;
+    color: white;
+    height: 3rem;
+    margin: auto;
+}
+
+.cartBtn {
+    height: 1rem;
+    color: black;
+    background-color: black;
+}
+
+.inputNumberClass {
+    height: 2rem;
+    width: 6.2rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.4rem;
+    font-size: smaller;
+}
+
+.crtBtn {
+    color: #cf5a00;
+    background: #ffdfc7;
+    border: 
+    1px solid #ffb57a;
+}
+
+.cartItemName {
+    width: 11.2rem;
+    margin-left: 0.5rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+.cartItemPrice {
+    display: flex;
+    width: 4rem;
+    margin-left: 0.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: smaller;
+}

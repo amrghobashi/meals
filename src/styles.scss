@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "primeng/resources/themes/saga-orange/theme.css";
+// @import "primeng/resources/primeng.css";
+// // @import "primeicons/primeicons.css";
+// @import 'material-icons/iconfont/material-icons.css';
+
+body,
+.p-component {
+    margin: 0;
+    font-family: cursive !important;
+}
+
+// @font-face {
+//     font-family: Tajawal-Bold;
+//     src: local("Tajawal-Bold"), url(./assets/fonts/Tajawal-Bold/Tajawal-Bold.ttf) format("truetype");
+// }
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    background: #ffffff;
+    border-color: #ff5a00;
+    color: #000000;
+}
+
+.p-tabview .p-tabview-panels {
+    background: #f9f9f9;
+}
+
+.tabHeader {
+    font-size: x-large;
+}
+
+.material-icons {
+    color: #ff6f00;
+    font-size: 30px;
+    margin-left: 0.5rem;
+}
+
+.tableCard {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 0%;
+    max-width: 90% !important;
+}
+
+.p-button.p-button-icon-only {
+    width: 1.7rem;
+    height: 2rem;
+}
+
+.p-inputnumber-buttons-horizontal .p-inputnumber-input {
+    text-align: center;
+    width: 2rem;
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    background-color: #ffeddf;
+}
+
+.crtBtn {
+    color: #cf5a00;
+    background: #ffdfc7;
+    border: 1px solid #ffb57a;
+}
+
+.crtBtn:hover {
+    background: #ffcda6;
+    color: #c15400;
+    border-color: #ffb881;
+}
+
+@media (max-width: 1600px) {
+    .tableCard {
+        max-width: 100%;
+    }
+}

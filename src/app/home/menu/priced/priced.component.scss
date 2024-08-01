@@ -1,0 +1,23 @@
+.itemImage {
+    width: 7rem;
+    height: 7rem;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    position: relative;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.itemCard {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.inputNumberClass {
+    height: 2rem;
+    width: 6.2rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.4rem;
+}

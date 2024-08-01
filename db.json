@@ -1,0 +1,271 @@
+{
+  "subsidized_meals": [
+    {
+      "id": "1",
+      "item_name": "Quarter Chicken Thigh",
+      "desc": "Quarter chicken thigh grilled on charcoal",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "Beef & Chicken",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "20",
+      "img": "assets/Thigh.jpg"
+    },
+    {
+      "id": "2",
+      "item_name": "Quarter Chicken Breast",
+      "desc": "Quarter chicken breast grilled on charcoal",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "Beef & Chicken",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "25",
+      "img": "assets/grilled-chicken-breast.jpg"
+    },
+    {
+      "id": "4",
+      "item_name": "Red Pasta",
+      "desc": "Delicious red sauce pasta",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "3",
+      "item_type_name": "Carbohydrates",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "10",
+      "img": "assets/pasta.jpg"
+    },
+    {
+      "id": "5",
+      "item_name": "White Rice ",
+      "desc": "Plain white rice plate",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "3",
+      "item_type_name": "Carbohydrates",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "8",
+      "img": "assets/rice.jpg"
+    },
+    {
+      "id": "6",
+      "item_name": "Banana",
+      "desc": "One whole banana",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "2",
+      "item_type_name": "Fruits",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "1",
+      "img": "assets/banana.jpg"
+    },
+    {
+      "id": "7",
+      "item_name": "Apple",
+      "desc": "One whole apple",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "2",
+      "item_type_name": "Fruits",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "2",
+      "img": "assets/apple.jpg"
+    }
+  ],
+  "subsidized_item_type": [
+    {
+      "id": "1",
+      "name": "Beef & Chicken",
+      "max_choice": "1"
+    },
+    {
+      "id": "2",
+      "name": "Fruits",
+      "max_choice": "2"
+    },
+    {
+      "id": "3",
+      "name": "Pasta & Rice",
+      "max_choice": "1"
+    }
+  ],
+  "priced_meals": [
+    {
+      "id": "3",
+      "item_name": "Beef Stroganoff Plate ",
+      "desc": "Slices of beef cooked in demi glace sauce",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "Beef & Chicken",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "200",
+      "img": "assets/beef.jpg"
+    },
+    {
+      "id": "1",
+      "item_name": "Quarter Chicken Thigh",
+      "desc": "Quarter chicken thigh grilled on charcoal",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "Beef & Chicken",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "70",
+      "img": "assets/Thigh.jpg"
+    },
+    {
+      "id": "2",
+      "item_name": "Quarter Chicken Breast",
+      "desc": "Quarter chicken breast grilled on charcoal",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "Beef & Chicken",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "85",
+      "img": "assets/grilled-chicken-breast.jpg"
+    },
+    {
+      "id": "4",
+      "item_name": "Negresco Pasta",
+      "desc": "Delicious creamy sauce, fresh mushroom, mozzarella cheese",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "3",
+      "item_type_name": "Carbohydrates",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "99",
+      "img": "assets/negresco.jpg"
+    },
+    {
+      "id": "5",
+      "item_name": "Mushroom Rice ",
+      "desc": "Italian rice with fresh mushroom",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "3",
+      "item_type_name": "Carbohydrates",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "85",
+      "img": "assets/mushroom-rice.jpg"
+    },
+    {
+      "id": "6",
+      "item_name": "Banana",
+      "desc": "One whole banana",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "2",
+      "item_type_name": "Fruits",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "5",
+      "img": "assets/banana.jpg"
+    },
+    {
+      "id": "7",
+      "item_name": "Apple",
+      "desc": "One whole apple",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "2",
+      "item_type_name": "Fruits",
+      "max_choice": "1",
+      "price": "8",
+      "img": "assets/apple.jpg"
+    },
+    {
+      "id": "8",
+      "item_name": "Green Salad",
+      "desc": "A plate of mix fresh vegetables",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "4",
+      "item_type_name": "Salads",
+      "max_choice": "1",
+      "price": "25",
+      "img": "assets/green.jpg"
+    },
+    {
+      "id": "8",
+      "item_name": "Garlic Dip Salad",
+      "desc": "Crafted with fresh gerbs and garlic",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "4",
+      "item_type_name": "Salads",
+      "max_choice": "1",
+      "price": "20",
+      "img": "assets/garlic.jpg"
+    }
+  ],
+  "priced_item_type": [
+    {
+      "id": "1",
+      "name": "Beef & Chicken"
+    },
+    {
+      "id": "2",
+      "name": "Fruits"
+    },
+    {
+      "id": "4",
+      "name": "Salads"
+    },
+    {
+      "id": "3",
+      "name": "Pasta & Rice"
+    }
+  ],
+  "subsidized_cart": [
+    {
+      "id": "4",
+      "item_type_id": "3",
+      "name": "Red Pasta",
+      "price": "10",
+      "count": 1
+    },
+    {
+      "id": "1",
+      "item_type_id": "1",
+      "name": "Quarter Chicken Thigh",
+      "price": "20",
+      "count": 1
+    },
+    {
+      "id": "7",
+      "item_type_id": "2",
+      "name": "Apple",
+      "price": "2",
+      "count": 1
+    }
+  ],
+  "priced_cart": [
+    {
+      "id": "3",
+      "item_type_id": "1",
+      "name": "Beef Stroganoff Plate ",
+      "price": "200",
+      "count": 1
+    }
+  ],
+  "total_cart": [
+    {
+      "id": "1",
+      "value": "237"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+.layout-topbar {
+    position: fixed;
+    height: 5rem;
+    z-index: 997;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: #ff7b15;
+    transition: left .2s;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 5px #00000005, 0 0 2px #0000000d, 0 1px 4px #00000014;
+}
+
+.spacer {
+    flex: auto;
+}
+
+.title {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+    font-family: cursive;
+}
+
+.menu-items {
+    color: white;
+    font-family: cursive;
+    display: block;
+    width: 80px;
+    cursor: pointer;
+}
