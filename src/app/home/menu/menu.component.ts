@@ -10,6 +10,7 @@ import { CartComponent } from "./cart/cart.component";
 import { MenuService } from './menu.service';
 import { Meal } from '../../Models/item';
 import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-menu',
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class MenuComponent {
     
+    subscription: Subscription = new Subscription;
     minDate!: Date;
     maxDate!: Date;
     tomorrow: Date = new Date;
@@ -53,10 +55,22 @@ export class MenuComponent {
         this.selectedDate = this.tomorrow;
     }
 
+    filter(id: number) {
+        console.log(id)
+        this.menuService.selectedMealType.next(id);
+        // this.subscription = this.menuService.selectedMealType.subscribe(id=>{
+        //     console.log(id)
+        // })
+    }
+
     getMeals() {
-        this.menuService.getMeals().then((meal) => {
+        this.menuService.getMealType().then((meal) => {
           this.meals = meal;
           this.selectedMeal = this.meals[0];
         });
+      }
+
+      ngOnDestroy(): void {
+        this.subscription.unsubscribe();
       }
 }

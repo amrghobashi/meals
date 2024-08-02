@@ -1,6 +1,7 @@
 <div style="display: flex; justify-content: center;">
     <div style="margin: 1%;" class="card flex justify-content-center">
-        <p-dropdown [style]="{'width': '10rem', 'height': '-webkit-fill-available'}" [(ngModel)]="selectedMeal" [options]="meals" optionLabel="name"></p-dropdown>
+        <p-dropdown [style]="{'width': '10rem', 'height': '-webkit-fill-available'}"
+            [(ngModel)]="selectedMeal" [options]="meals" optionLabel="name" (onClick)="filter(selectedMeal.id)"></p-dropdown>
     </div>
     <div style="margin: 1%; width: 10rem;">
         <p-calendar dir="ltr" [(ngModel)]="selectedDate" [readonlyInput]="true" [minDate]="tomorrow" [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay"></p-calendar>

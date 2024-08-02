@@ -6,12 +6,13 @@
       "desc": "Quarter chicken thigh grilled on charcoal",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "1",
+      "item_type_id": "4",
       "item_type_name": "Beef & Chicken",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "20",
-      "img": "assets/Thigh.jpg"
+      "img": "https://media.istockphoto.com/id/681773572/photo/grilled-chicken-leg-with-potato-for-garnish-wooden-background.jpg?s=612x612&w=0&k=20&c=yoiuGiHufqI2_kYvlfcOHWXwl8_HKBKEF9WiO7iGiVY="
     },
     {
       "id": "2",
@@ -19,12 +20,13 @@
       "desc": "Quarter chicken breast grilled on charcoal",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "1",
+      "item_type_id": "4",
       "item_type_name": "Beef & Chicken",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "25",
-      "img": "assets/grilled-chicken-breast.jpg"
+      "img": "https://media.istockphoto.com/id/1411811140/photo/grilled-chicken-fillet-with-herbs-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=CA0lpbHWhvY0-MbunyHwOvlQA-Qv0hkW2Wa6OknjVdg="
     },
     {
       "id": "4",
@@ -32,12 +34,13 @@
       "desc": "Delicious red sauce pasta",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "3",
+      "item_type_id": "5",
       "item_type_name": "Carbohydrates",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "10",
-      "img": "assets/pasta.jpg"
+      "img": "https://media.istockphoto.com/id/1053864102/photo/pasta-with-meat-tomato-sauce-and-vegetables.jpg?s=612x612&w=0&k=20&c=yxWKQCIzhVsTPdnK_N5mkODwtIKfepRTvXdPN_ffPkY="
     },
     {
       "id": "5",
@@ -45,12 +48,13 @@
       "desc": "Plain white rice plate",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "3",
+      "item_type_id": "5",
       "item_type_name": "Carbohydrates",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "8",
-      "img": "assets/rice.jpg"
+      "img": "https://media.istockphoto.com/id/1165114438/photo/boiled-rice-in-a-bowl.jpg?s=612x612&w=0&k=20&c=LpGzGTOja3SzDkpCgPB2UccfUGYyYbBmMyDkZLGu1gk="
     },
     {
       "id": "6",
@@ -58,12 +62,13 @@
       "desc": "One whole banana",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "2",
+      "item_type_id": "6",
       "item_type_name": "Fruits",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "1",
-      "img": "assets/banana.jpg"
+      "img": "https://t3.ftcdn.net/jpg/01/38/83/62/360_F_138836201_jTWikUxvbpE6aCOoSmpAHXCbznoBJqTt.jpg"
     },
     {
       "id": "7",
@@ -71,28 +76,174 @@
       "desc": "One whole apple",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "2",
+      "item_type_id": "6",
       "item_type_name": "Fruits",
+      "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
       "price": "2",
-      "img": "assets/apple.jpg"
+      "img": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w="
+    },
+    {
+      "id": "8",
+      "item_name": "Scrambled eggs",
+      "desc": "A dish made from eggs stirred and whipped together typically with salt and butter",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "",
+      "meal_type_id": "1",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "3",
+      "img": "https://assets.epicurious.com/photos/57b35f844924889253994109/master/pass/scrambled-eggs.jpg"
+    },
+    {
+      "id": "9",
+      "item_name": "Scotch Eggs",
+      "desc": "Soft boiled eggs wrapped in seasoned ground beef and fried",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "",
+      "meal_type_id": "1",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "5",
+      "img": "https://hips.hearstapps.com/hmg-prod/images/scotch-egg-recipe-1622141225.jpg?crop=0.811xw:0.813xh;0.121xw,0&resize=980:*"
+    },
+    {
+      "id": "10",
+      "item_name": "French toast",
+      "desc": "Sliced bread soaked in beaten eggs and often milk or cream",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "2",
+      "item_type_name": "",
+      "meal_type_id": "1",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "3",
+      "img": "https://www.shutterstock.com/image-photo/homemade-stack-tasty-french-toast-260nw-2463922921.jpg"
+    },
+    {
+      "id": "11",
+      "item_name": "Apple",
+      "desc": "One whole apple",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "3",
+      "item_type_name": "",
+      "meal_type_id": "1",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "5",
+      "img": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w="
+    },
+    {
+      "id": "12",
+      "item_name": "Milk",
+      "desc": "One cup of fresh milk",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "7",
+      "item_type_name": "",
+      "meal_type_id": "3",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "1",
+      "img": "https://media.istockphoto.com/id/535489242/photo/pouring-milk-in-the-glass-on-the-background-of-nature.jpg?s=612x612&w=0&k=20&c=bqBubtMFs_kv9z0OZVLunl3NFTb_XAVKiw8v1hO1T80="
+    },
+    {
+      "id": "13",
+      "item_name": "Greek yogurt",
+      "desc": "A protein-rich dairy yogurt",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "7",
+      "item_type_name": "",
+      "meal_type_id": "3",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "3",
+      "img": "https://media.istockphoto.com/id/515777808/photo/yogurt.jpg?s=612x612&w=0&k=20&c=1xNf2q0hmndqAbqyTUUv6F_GbBhhCZkGHbiOERz91LE="
+    },
+    {
+      "id": "14",
+      "item_name": "Green Salad",
+      "desc": "A plate of mix fresh vegetables",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "8",
+      "item_type_name": "",
+      "meal_type_id": "3",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "3",
+      "img": "https://media.istockphoto.com/id/528424672/photo/garden-salad.jpg?s=612x612&w=0&k=20&c=ebCO5Fo0H50LrrLFQrP_5lcqHqVLgZ056CJxQSG-45c="
+    },
+    {
+      "id": "15",
+      "item_name": "Garlic Dip Salad",
+      "desc": "Crafted with fresh gerbs and garlic",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "8",
+      "item_type_name": "",
+      "meal_type_id": "3",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "3",
+      "img": "https://t4.ftcdn.net/jpg/08/12/97/53/360_F_812975354_CcynZxcLLrhooMvZJ5OGyu5OcKPqNHTb.jpg"
     }
   ],
   "subsidized_item_type": [
     {
       "id": "1",
-      "name": "Beef & Chicken",
+      "name": "Eggs",
+      "meal_type_id": "1",
       "max_choice": "1"
     },
     {
       "id": "2",
-      "name": "Fruits",
-      "max_choice": "2"
+      "name": "Toasts",
+      "meal_type_id": "1",
+      "max_choice": "1"
     },
     {
       "id": "3",
+      "name": "Fruits",
+      "meal_type_id": "1",
+      "max_choice": "1"
+    },
+    {
+      "id": "4",
+      "name": "Beef & Chicken",
+      "meal_type_id": "2",
+      "max_choice": "1"
+    },
+    {
+      "id": "5",
       "name": "Pasta & Rice",
+      "meal_type_id": "2",
+      "max_choice": "1"
+    },
+    {
+      "id": "6",
+      "name": "Fruits",
+      "meal_type_id": "2",
+      "max_choice": "1"
+    },
+    {
+      "id": "7",
+      "name": "Dairy",
+      "meal_type_id": "3",
+      "max_choice": "1"
+    },
+    {
+      "id": "8",
+      "name": "Salads",
+      "meal_type_id": "3",
       "max_choice": "1"
     }
   ],
@@ -232,24 +383,31 @@
   ],
   "subsidized_cart": [
     {
-      "id": "4",
-      "item_type_id": "3",
-      "name": "Red Pasta",
-      "price": "10",
-      "count": 1
-    },
-    {
-      "id": "1",
+      "id": "8",
       "item_type_id": "1",
-      "name": "Quarter Chicken Thigh",
-      "price": "20",
+      "name": "Scrambled eggs",
+      "price": "3",
       "count": 1
     },
     {
-      "id": "7",
+      "id": "10",
       "item_type_id": "2",
+      "name": "French toast",
+      "price": "3",
+      "count": 1
+    },
+    {
+      "id": "11",
+      "item_type_id": "3",
       "name": "Apple",
-      "price": "2",
+      "price": "5",
+      "count": 1
+    },
+    {
+      "id": "10",
+      "item_type_id": "2",
+      "name": "French toast",
+      "price": "3",
       "count": 1
     }
   ],

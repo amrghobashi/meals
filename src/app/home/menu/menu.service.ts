@@ -8,7 +8,7 @@ export class MenuService {
 
   constructor() { }
   mealDate = new BehaviorSubject<Date>(new Date);
-  mealId = new BehaviorSubject<number>(1);
+  selectedMealType = new BehaviorSubject<number>(1);
 
   meals() {
     return [
@@ -27,7 +27,7 @@ export class MenuService {
       ]
   }
 
-  getMeals() {
+  getMealType() {
     return Promise.resolve(this.meals().slice(0, 3));
 }
 }

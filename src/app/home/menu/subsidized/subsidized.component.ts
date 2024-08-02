@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 import { CartItem } from '../../../Models/cart';
 import { CartService } from '../cart/cart.service';
 import { Message, MessageService } from 'primeng/api';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-subsidized',
@@ -31,25 +32,31 @@ export class SubsidizedComponent {
 
 
   constructor(private subsidizedService: SubsidizedService, private cartService: CartService,
-    private messageService: MessageService
+    private messageService: MessageService, private menuService: MenuService
   ) {}
 
   ngOnInit() {
-    this.getMealItemType();
-    this.getMealItem();
+    // this.getMealItemType();
+    // this.getMealItem();
+    this.getMealType();
   }
 
-  getMealItemType() {
-    this.subscription = this.subsidizedService.getItemType().subscribe(itemTypes => {
+  getMealType() {
+    this.subscription = this.menuService.selectedMealType.subscribe(id => {
+      this.getMealItemType(id);
+      this.getMealItem(id);
+    })
+  }
+
+  getMealItemType(id: number) {
+    this.subscription = this.subsidizedService.getItemType(id).subscribe(itemTypes => {
       this.itemTypes = itemTypes;
     })
   }
 
-  getMealItem() {
-    this.subscription = this.subsidizedService.getMealItems().subscribe(items => {
+  getMealItem(id: number) {
+    this.subscription = this.subsidizedService.getMealItems(id).subscribe(items => {
       this.items = items;
-      console.log(items);
-
     })
   }
 
