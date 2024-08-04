@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
-import { CartItem, CartTotalPrice } from '../../../Models/cart';
-import { environment } from './../../../../environments/environment';
+import { CartItem, CartTotalPrice } from '../../Models/cart';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,19 @@ export class CartService {
     return this.http.post(this.API_URL + type, item)
   }
 
+  updateItemCount(id: number, count: number, price: number) {
+    return this.http.patch<CartItem>(this.API_URL + "subsidized_cart/" + id, {"count": count, "price": +price});
+  }
+
   getItems(type: string): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.API_URL + type);
   }
 
-  getItemsCount(item_type_id: number, type: string): Observable<CartItem[]> {
+  getItemsCount(item_id: number, type: string): Observable<CartItem> {
+    return this.http.get<CartItem>(this.API_URL + type +"/?id="+item_id);
+  }
+
+  getItemTypeCount(item_type_id: number, type: string): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.API_URL + type +"/?item_type_id="+item_type_id);
   }
 

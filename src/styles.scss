@@ -25,6 +25,10 @@ body,
     background: #f9f9f9;
 }
 
+.tabviewCustom {
+    width: 100%;
+}
+
 .tabHeader {
     font-size: x-large;
 }
@@ -37,10 +41,15 @@ body,
 
 .tableCard {
     text-align: center;
-    display: block;
+    display: flex;
     margin: auto;
     margin-top: 0%;
     max-width: 90% !important;
+}
+
+.p-card .p-card-content {
+    padding: 1rem 0;
+    display: flex;
 }
 
 .p-button.p-button-icon-only {

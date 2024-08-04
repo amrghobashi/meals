@@ -6,7 +6,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { CardModule } from 'primeng/card';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
-import { CartComponent } from "./cart/cart.component";
+import { CartComponent } from "../cart/cart.component";
 import { MenuService } from './menu.service';
 import { Meal } from '../../Models/item';
 import { FormsModule } from '@angular/forms';

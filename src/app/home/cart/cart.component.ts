@@ -5,7 +5,7 @@ import { CardModule } from 'primeng/card';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CartService } from './cart.service';
 import { Subscription } from 'rxjs';
-import { CartItem } from '../../../Models/cart';
+import { CartItem } from '../../Models/cart';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -22,7 +22,7 @@ export class CartComponent {
   pricedItemsCart!: CartItem[];
   hallName: string = "Egypt Factory - Restaurant no. 1";
   itemValue: number = 10;
-  totalPrice!: any;
+  totalPrice: number = 0;
   
   constructor(private cartService: CartService) {}
 
@@ -31,19 +31,29 @@ export class CartComponent {
     this.getPricedItems();
     this.getSubsidizedCartUpdate();
     this.getPricedCartUpdate();
-    this.getTotalCart();
+    // this.getTotalCart();
   }
-
 
   getSubsidizedItems() {
     this.subscription = this.cartService.getItems("subsidized_cart").subscribe(items => {
       this.subsidizedItemsCart = items;
+      // console.log(items)
+      let price = 0;
+      for(let i = 0; i < items.length; i++){
+        price += items[i].price?? 0;
+      }
+      this.totalPrice += price;
     })
   }
 
   getPricedItems() {
     this.subscription = this.cartService.getItems("priced_cart").subscribe(items => {
       this.pricedItemsCart = items;
+      let price = 0;
+      for(let i = 0; i < items.length; i++){
+        price += items[i].price?? 0;
+      }
+      this.totalPrice += price;
     })
   }
 
@@ -58,7 +68,7 @@ export class CartComponent {
   }
 
   getSubsidizedCartUpdate() {
-    this.subscription = this.cartService.subsidizedCartSubject.subscribe(() => {
+    this.subscription = this.cartService.subsidizedCartSubject.subscribe(data => {
       this.getSubsidizedItems();
     });
   }
@@ -70,8 +80,8 @@ export class CartComponent {
   }
 
   getTotalCart() {
-    this.cartService.getTotalPrice().subscribe(value => {
-      this.totalPrice = value.value;
+    this.cartService.getTotalPrice().subscribe(data => {
+      // this.totalPrice = data.value;
     })
   }
 

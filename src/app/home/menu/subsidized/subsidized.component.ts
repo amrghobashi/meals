@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { Item, MealItemType } from '../../../Models/item';
 import { Subscription } from 'rxjs';
 import { CartItem } from '../../../Models/cart';
-import { CartService } from '../cart/cart.service';
+import { CartService } from '../../cart/cart.service';
 import { Message, MessageService } from 'primeng/api';
 import { MenuService } from '../menu.service';
 
@@ -27,17 +27,17 @@ export class SubsidizedComponent {
   item!: Item;
   cartItem!: CartItem;
   subscription: Subscription = new Subscription;
-  countItems!: number;
+  countItems: number = 0;
+  countItemType!: number;
   alertMessage!: Message[];
-
+  itemTypeArray!: MealItemType[];
 
   constructor(private subsidizedService: SubsidizedService, private cartService: CartService,
     private messageService: MessageService, private menuService: MenuService
-  ) {}
+  ) { }
 
   ngOnInit() {
-    // this.getMealItemType();
-    // this.getMealItem();
+    this.getItemTypeArray();
     this.getMealType();
   }
 
@@ -67,59 +67,64 @@ export class SubsidizedComponent {
         "id": item.id,
         "item_type_id": item.item_type_id,
         "name": item.item_name,
-        "price": item.price,
+        "price": Number(item.price),
         "count": 1
       }
       this.addToCart(this.cartItem);
     });
   }
 
-  addToCart(cartItem: CartItem){
+  incrementItem(id: number, count: number, price: number) {
+    this.subscription = this.cartService.updateItemCount(id, count, price).subscribe(data => {
+      // console.log(data)
+      this.cartService.sendAddSubsidized();
+    });
+  }
+
+  addToCart(cartItem: CartItem) {
     this.subscription = this.cartService.addToCart(cartItem, "subsidized_cart").subscribe(item => {
       this.cartService.sendAddSubsidized();
     })
   }
 
-  updateCart(){
+  updateCart() {
     this.cartService.getItems("subsidized_cart").subscribe();
   }
 
-  checkCount(item_type_id: number, item_id: number) {
-    this.subscription = this.cartService.getItemsCount(item_type_id, "subsidized_cart").subscribe(items => {
-      this.countItems = items.length;
-      if(item_type_id == 1){
-        if(this.countItems >= 1)
-          {
-            this.messageService.clear();
-            this.messageService.add({ key: 't1', severity: 'error',
-              detail: 'Sorry you have reached the maximum count.' });
-          }
+  checkCartCount(item_type_id: number, item_id: number, type: string) {
+    const max = this.itemTypeArray[item_type_id - 1].max_choice ?? 0;
+    let countItems = 0;
+    this.subscription = this.cartService.getItemTypeCount(item_type_id, type).subscribe(data => {
+      for(let i = 0; i < data.length; i++){
+        if(countItems < max) {
+          countItems += data[i].count?? 0;
+        }
+      }
+      this.countItems = countItems;
+      if(this.countItems < max) {
+        const count = data.find(i => i.id === item_id)?.count;
+        const price = data.find(i => i.id === item_id)?.price ?? 0;
+        if(count)
+          this.incrementItem(item_id, count +1, price*2);
         else
           this.addItem(item_id);
       }
-      else if(item_type_id == 2){
-        if(this.countItems >= 2)
-          {
-            this.messageService.clear();
-            this.messageService.add({ key: 't1', severity: 'error',
-              detail: 'Sorry you have reached the maximum count.' });
-          }
-        else
-          this.addItem(item_id);
+      else {
+          this.messageService.clear();
+          this.messageService.add({
+            key: 't1', severity: 'error',
+            detail: 'Sorry you have reached the maximum count.'
+          });
       }
-      else if(item_type_id == 3){
-        if(this.countItems >= 1)
-          {
-            this.messageService.clear();
-            this.messageService.add({ key: 't1', severity: 'error',
-              detail: 'Sorry you have reached the maximum count.' });
-          }
-        else
-          this.addItem(item_id);
-      }
+    });
+  }
+
+  getItemTypeArray() {
+    this.subscription = this.subsidizedService.getItemTypeArray().subscribe(data => {
+      this.itemTypeArray = data;
     })
   }
-  
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

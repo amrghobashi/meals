@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { Item, MealItemType } from '../../../Models/item';
 import { Subscription } from 'rxjs';
 import { CartItem } from '../../../Models/cart';
-import { CartService } from '../cart/cart.service';
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-priced',
@@ -43,7 +43,6 @@ export class PricedComponent {
   getMealItem() {
     this.subscription = this.pricedService.getMealItems().subscribe(items => {
       this.items = items;
-      console.log(items);
     })
   }
 

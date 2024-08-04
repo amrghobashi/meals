@@ -23,4 +23,8 @@ export class SubsidizedService {
   getOneItem(id: number) {
     return this.http.get<Item>(this.API_URL + "subsidized_meals/" + id)
   }
+
+  getItemTypeArray() {
+    return this.http.get<MealItemType[]>(this.API_URL + "subsidized_item_type");
+  }
 };

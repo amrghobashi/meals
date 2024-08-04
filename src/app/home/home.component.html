@@ -1,25 +1,31 @@
 <app-tool-bar></app-tool-bar>
+<div style="width: 70%;">
 
-<p-card class="tableCard">
-    <p-tabView styleClass="tabview-custom">
-        <p-tabPanel>
-            <ng-template pTemplate="header">
-                <span class="material-icons">menu_book</span>
-                <span class="tabHeader">Menu </span>
-            </ng-template>
-            <p>
-                <app-menu></app-menu>
-            </p>
-        </p-tabPanel>
-        <p-tabPanel header="Reviews ">
-            <ng-template pTemplate="header">
-                <span class="material-icons">rate_review</span>
-                <span class="tabHeader">Reviews </span>
-            </ng-template>
+    <p-card class="tableCard" [style]="{'display': 'flex','width': '-webkit-fill-available;'}">
+        <p-tabView styleClass="tabviewCustom">
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <span class="material-icons">menu_book</span>
+                    <span class="tabHeader">Menu </span>
+                </ng-template>
+                <p>
+                    <app-menu></app-menu>
+                </p>
+            </p-tabPanel>
+            <p-tabPanel header="Reviews ">
+                <ng-template pTemplate="header">
+                    <span class="material-icons">rate_review</span>
+                    <span class="tabHeader">Reviews </span>
+                </ng-template>
             <p>
                 <app-review></app-review>
             </p>
         </p-tabPanel>
     </p-tabView>
-</p-card>
-<router-outlet />
+    <div style="width: 30%; position: fixed; margin-left: 62%; ">
+        <app-cart></app-cart>
+        </div>
+    </p-card>
+</div>
+    <router-outlet />
+    

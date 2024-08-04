@@ -1,6 +1,6 @@
-// .p-card .p-card-body {
-//     padding: 0px !important;
-// }
+.p-card .p-card-body {
+    width: 75%;
+}
 
 .cartHeader {
     font-size: x-large;
@@ -48,4 +48,9 @@
     margin-top: auto;
     margin-bottom: auto;
     font-size: smaller;
+}
+
+.cartCard {
+    width: 94%;
+    margin-left: 2.5rem;
 }

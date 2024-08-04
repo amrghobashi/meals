@@ -90,7 +90,7 @@
       "desc": "A dish made from eggs stirred and whipped together typically with salt and butter",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "1",
+      "item_type_id": "2",
       "item_type_name": "",
       "meal_type_id": "1",
       "max_choice": "1",
@@ -104,7 +104,7 @@
       "desc": "Soft boiled eggs wrapped in seasoned ground beef and fried",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "1",
+      "item_type_id": "2",
       "item_type_name": "",
       "meal_type_id": "1",
       "max_choice": "1",
@@ -118,12 +118,12 @@
       "desc": "Sliced bread soaked in beaten eggs and often milk or cream",
       "quantity": "1",
       "reserved_quantity": "0",
-      "item_type_id": "2",
+      "item_type_id": "1",
       "item_type_name": "",
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "3",
+      "price": "1",
       "img": "https://www.shutterstock.com/image-photo/homemade-stack-tasty-french-toast-260nw-2463922921.jpg"
     },
     {
@@ -137,7 +137,7 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "5",
+      "price": "2",
       "img": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w="
     },
     {
@@ -195,18 +195,32 @@
       "subsidized_menu_id": "349",
       "price": "3",
       "img": "https://t4.ftcdn.net/jpg/08/12/97/53/360_F_812975354_CcynZxcLLrhooMvZJ5OGyu5OcKPqNHTb.jpg"
+    },
+    {
+      "id": "16",
+      "item_name": "Garlic bread",
+      "desc": "Sliced garlic bread with herbs",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "1",
+      "item_type_name": "",
+      "meal_type_id": "1",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "1",
+      "img": "https://media.istockphoto.com/id/547046390/photo/garlic-bread.jpg?s=612x612&w=0&k=20&c=oArNgkbjjPKlToDnBhL7xNwU4_eJLPTaLbAlIuunHDY="
     }
   ],
   "subsidized_item_type": [
     {
       "id": "1",
-      "name": "Eggs",
+      "name": "Bread & Toasts",
       "meal_type_id": "1",
-      "max_choice": "1"
+      "max_choice": "2"
     },
     {
       "id": "2",
-      "name": "Toasts",
+      "name": "Eggs",
       "meal_type_id": "1",
       "max_choice": "1"
     },
@@ -384,31 +398,24 @@
   "subsidized_cart": [
     {
       "id": "8",
-      "item_type_id": "1",
-      "name": "Scrambled eggs",
-      "price": "3",
-      "count": 1
-    },
-    {
-      "id": "10",
       "item_type_id": "2",
-      "name": "French toast",
-      "price": "3",
+      "name": "Scrambled eggs",
+      "price": 3,
       "count": 1
     },
     {
       "id": "11",
       "item_type_id": "3",
       "name": "Apple",
-      "price": "5",
+      "price": 2,
       "count": 1
     },
     {
       "id": "10",
-      "item_type_id": "2",
+      "item_type_id": "1",
       "name": "French toast",
-      "price": "3",
-      "count": 1
+      "price": 2,
+      "count": 2
     }
   ],
   "priced_cart": [
@@ -416,7 +423,7 @@
       "id": "3",
       "item_type_id": "1",
       "name": "Beef Stroganoff Plate ",
-      "price": "200",
+      "price": 200,
       "count": 1
     }
   ],
