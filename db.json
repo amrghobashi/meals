@@ -397,25 +397,25 @@
   ],
   "subsidized_cart": [
     {
+      "id": "10",
+      "item_type_id": "1",
+      "name": "French toast",
+      "price": 1,
+      "count": 1
+    },
+    {
+      "id": "16",
+      "item_type_id": "1",
+      "name": "Garlic bread",
+      "price": 1,
+      "count": 1
+    },
+    {
       "id": "8",
       "item_type_id": "2",
       "name": "Scrambled eggs",
       "price": 3,
       "count": 1
-    },
-    {
-      "id": "11",
-      "item_type_id": "3",
-      "name": "Apple",
-      "price": 2,
-      "count": 1
-    },
-    {
-      "id": "10",
-      "item_type_id": "1",
-      "name": "French toast",
-      "price": 2,
-      "count": 2
     }
   ],
   "priced_cart": [
@@ -424,6 +424,13 @@
       "item_type_id": "1",
       "name": "Beef Stroganoff Plate ",
       "price": 200,
+      "count": 1
+    },
+    {
+      "id": "2",
+      "item_type_id": "1",
+      "name": "Quarter Chicken Breast",
+      "price": 85,
       "count": 1
     }
   ],

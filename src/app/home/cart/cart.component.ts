@@ -23,66 +23,79 @@ export class CartComponent {
   hallName: string = "Egypt Factory - Restaurant no. 1";
   itemValue: number = 10;
   totalPrice: number = 0;
-  
-  constructor(private cartService: CartService) {}
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
     this.getSubsidizedItems();
     this.getPricedItems();
     this.getSubsidizedCartUpdate();
     this.getPricedCartUpdate();
-    // this.getTotalCart();
   }
 
   getSubsidizedItems() {
     this.subscription = this.cartService.getItems("subsidized_cart").subscribe(items => {
       this.subsidizedItemsCart = items;
-      // console.log(items)
-      let price = 0;
-      for(let i = 0; i < items.length; i++){
-        price += items[i].price?? 0;
-      }
-      this.totalPrice += price;
     })
   }
 
   getPricedItems() {
     this.subscription = this.cartService.getItems("priced_cart").subscribe(items => {
       this.pricedItemsCart = items;
-      let price = 0;
-      for(let i = 0; i < items.length; i++){
-        price += items[i].price?? 0;
-      }
-      this.totalPrice += price;
+      this.getTotalCart();
     })
   }
 
-  deleteItem(id: number, type: string){
-    this.subscription = this.cartService.deleteItem(id, type).subscribe(items => {
-      if(type == "subsidized_cart")
-        this.getSubsidizedItems();
-      else 
-        this.getPricedItems();
-
+  deleteItem(id: number, type: string) {
+    this.subscription = this.cartService.deleteItem(id, type).subscribe(() => {
+      if (type == "subsidized_cart") {
+        for (let i = 0; i < this.subsidizedItemsCart.length; i++) {
+          if (this.subsidizedItemsCart[i].id === id) {
+            this.subsidizedItemsCart.splice(i--, 1);
+          }
+        }
+      }
+      else {
+        for (let i = 0; i < this.pricedItemsCart.length; i++) {
+          if (this.pricedItemsCart[i].id === id) {
+            this.pricedItemsCart.splice(i--, 1);
+          }
+        }
+      }
+      this.getTotalCart();
     })
   }
 
   getSubsidizedCartUpdate() {
     this.subscription = this.cartService.subsidizedCartSubject.subscribe(data => {
       this.getSubsidizedItems();
+      setTimeout(() => {
+        this.getTotalCart();
+      }, 100);
     });
   }
 
   getPricedCartUpdate() {
     this.subscription = this.cartService.pricedCartSubject.subscribe(() => {
       this.getPricedItems();
+      setTimeout(() => {
+        this.getTotalCart();
+      }, 100);
     });
   }
 
   getTotalCart() {
-    this.cartService.getTotalPrice().subscribe(data => {
-      // this.totalPrice = data.value;
-    })
+    let firstCart = [...this.subsidizedItemsCart];
+    let firstPrice = 0;
+    for (let i = 0; i < firstCart.length; i++) {
+      firstPrice += firstCart[i].price ?? 0;
+    }
+    let secondCart = [...this.pricedItemsCart];
+    let secondPrice = 0;
+    for (let i = 0; i < secondCart.length; i++) {
+      secondPrice += secondCart[i].price ?? 0;
+    }
+    this.totalPrice = firstPrice + secondPrice;
   }
 
   ngOnDestroy(): void {

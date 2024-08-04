@@ -53,7 +53,7 @@ export class PricedComponent {
         "id": item.id,
         "item_type_id": item.item_type_id,
         "name": item.item_name,
-        "price": item.price,
+        "price": Number(item.price),
         "count": 1
       }
       this.addToCart(this.cartItem);
