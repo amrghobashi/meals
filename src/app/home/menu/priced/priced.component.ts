@@ -46,6 +46,21 @@ export class PricedComponent {
     })
   }
 
+  checkCart(id: number) {
+    this.subscription = this.cartService.searchPricedCart().subscribe(data => {
+      const found = data.find(i => i.id === id);
+      if(found) {
+        this.updateCartItem(found);
+      }
+      else {
+        this.addItem(id);
+      }
+    },
+    error => {
+      console.error('Error fetching cart items:', error);
+    });
+  }
+
   addItem(id: number) {
     this.subscription = this.pricedService.getOneItem(id).subscribe(item => {
       this.item = item;
@@ -62,6 +77,17 @@ export class PricedComponent {
 
   addToCart(cartItem: CartItem){
     this.subscription = this.cartService.addToCart(cartItem, "priced_cart").subscribe(item => {
+      this.cartService.sendAddPriced();
+    })
+  }
+
+  updateCartItem(item: CartItem) {
+    const count = item?.count ?? 1;
+    const newCount = count +1;
+    const price = item?.price ?? 1;
+    const unitPrice = price / count;
+    const newPrice = unitPrice * newCount;
+    this.subscription = this.cartService.updatePricedItem(item.id, newCount, newPrice).subscribe(data => {
       this.cartService.sendAddPriced();
     })
   }

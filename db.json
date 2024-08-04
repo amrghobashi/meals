@@ -402,28 +402,14 @@
       "name": "French toast",
       "price": 1,
       "count": 1
-    },
-    {
-      "id": "16",
-      "item_type_id": "1",
-      "name": "Garlic bread",
-      "price": 1,
-      "count": 1
-    },
-    {
-      "id": "8",
-      "item_type_id": "2",
-      "name": "Scrambled eggs",
-      "price": 3,
-      "count": 1
     }
   ],
   "priced_cart": [
     {
-      "id": "3",
+      "id": "1",
       "item_type_id": "1",
-      "name": "Beef Stroganoff Plate ",
-      "price": 200,
+      "name": "Quarter Chicken Thigh",
+      "price": 70,
       "count": 1
     },
     {

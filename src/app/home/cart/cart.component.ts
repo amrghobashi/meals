@@ -98,6 +98,19 @@ export class CartComponent {
     this.totalPrice = firstPrice + secondPrice;
   }
 
+  onChangePricedCart(item: CartItem, event: any) {
+    let prevCount = event.formattedValue;
+    const prevPrice = this.pricedItemsCart.find(i => i.id === item.id)?.price ?? 0;
+    let newCount = item.count??1;
+    let unitPrice = prevPrice / prevCount;
+    let newPrice = newCount * unitPrice;
+    this.subscription = this.cartService.updatePricedItem(item.id, newCount, newPrice).subscribe(data => {
+      this.getPricedItems();
+      setTimeout(() => {
+        this.getTotalCart();
+      }, 100);
+    })
+  }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
