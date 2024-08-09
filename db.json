@@ -406,18 +406,18 @@
   ],
   "priced_cart": [
     {
-      "id": "1",
-      "item_type_id": "1",
-      "name": "Quarter Chicken Thigh",
-      "price": 70,
-      "count": 1
-    },
-    {
       "id": "2",
       "item_type_id": "1",
       "name": "Quarter Chicken Breast",
       "price": 85,
       "count": 1
+    },
+    {
+      "id": "3",
+      "item_type_id": "1",
+      "name": "Beef Stroganoff Plate ",
+      "price": 800,
+      "count": 4
     }
   ],
   "total_cart": [
