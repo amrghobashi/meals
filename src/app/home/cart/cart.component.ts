@@ -7,6 +7,7 @@ import { CartService } from './cart.service';
 import { Subscription } from 'rxjs';
 import { CartItem } from '../../Models/cart';
 import { CommonModule } from '@angular/common';
+import { MenuService } from '../menu/menu.service';
 
 @Component({
   selector: 'app-cart',
@@ -23,24 +24,41 @@ export class CartComponent {
   hallName: string = "Egypt Factory - Restaurant no. 1";
   itemValue: number = 10;
   totalPrice: number = 0;
+  mealType: number = 1;
+  mealTypeName: string = "Breakfast";
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private menuService: MenuService) { }
 
   ngOnInit() {
-    this.getSubsidizedItems();
-    this.getPricedItems();
+    this.getMealType();
+    this.getSubsidizedItems(1);
+    this.getPricedItems(1);
     this.getSubsidizedCartUpdate();
     this.getPricedCartUpdate();
   }
 
-  getSubsidizedItems() {
-    this.subscription = this.cartService.getItems("subsidized_cart").subscribe(items => {
+  getMealType() {
+    this.subscription = this.menuService.selectedMealType.subscribe(id => {
+      this.mealType = id;
+      if(id == 1)
+        this.mealTypeName = "Breakfast";
+      else if(id == 2)
+        this.mealTypeName = "Lunch";
+      else 
+        this.mealTypeName = "Dinner";
+      this.getSubsidizedItems(id);
+      this.getPricedItems(id);
+    })
+  }
+
+  getSubsidizedItems(meal_id: number) {
+    this.subscription = this.cartService.getItems("subsidized_cart", meal_id).subscribe(items => {
       this.subsidizedItemsCart = items;
     })
   }
 
-  getPricedItems() {
-    this.subscription = this.cartService.getItems("priced_cart").subscribe(items => {
+  getPricedItems(meal_id: number) {
+    this.subscription = this.cartService.getItems("priced_cart", meal_id).subscribe(items => {
       this.pricedItemsCart = items;
       this.getTotalCart();
     })
@@ -68,7 +86,7 @@ export class CartComponent {
 
   getSubsidizedCartUpdate() {
     this.subscription = this.cartService.subsidizedCartSubject.subscribe(data => {
-      this.getSubsidizedItems();
+      this.getSubsidizedItems(this.mealType);
       setTimeout(() => {
         this.getTotalCart();
       }, 100);
@@ -77,7 +95,7 @@ export class CartComponent {
 
   getPricedCartUpdate() {
     this.subscription = this.cartService.pricedCartSubject.subscribe(() => {
-      this.getPricedItems();
+      this.getPricedItems(this.mealType);
       setTimeout(() => {
         this.getTotalCart();
       }, 100);
@@ -105,7 +123,7 @@ export class CartComponent {
     let unitPrice = prevPrice / prevCount;
     let newPrice = newCount * unitPrice;
     this.subscription = this.cartService.updatePricedItem(item.id, newCount, newPrice).subscribe(data => {
-      this.getPricedItems();
+      this.getPricedItems(this.mealType);
       setTimeout(() => {
         this.getTotalCart();
       }, 100);

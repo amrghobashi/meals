@@ -67,6 +67,7 @@ export class SubsidizedComponent {
         "id": item.id,
         "item_type_id": item.item_type_id,
         "name": item.item_name,
+        "meal_type_id": item.meal_type_id,
         "price": Number(item.price),
         "count": 1
       }
@@ -87,9 +88,9 @@ export class SubsidizedComponent {
     })
   }
 
-  updateCart() {
-    this.cartService.getItems("subsidized_cart").subscribe();
-  }
+  // updateCart() {
+  //   this.cartService.getItems("subsidized_cart").subscribe();
+  // }
 
   checkCartCount(item_type_id: number, item_id: number, type: string) {
     const max = this.itemTypeArray[item_type_id - 1].max_choice ?? 0;

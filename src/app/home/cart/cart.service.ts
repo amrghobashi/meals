@@ -27,8 +27,8 @@ export class CartService {
     return this.http.patch<CartItem>(this.API_URL + "priced_cart/" + id, {"count": count, "price": +price});
   }
 
-  getItems(type: string): Observable<CartItem[]> {
-    return this.http.get<CartItem[]>(this.API_URL + type);
+  getItems(type: string, meal_type_id: number): Observable<CartItem[]> {
+    return this.http.get<CartItem[]>(this.API_URL + type + "?meal_type_id=" + meal_type_id);
   }
 
   getItemsCount(item_id: number, type: string): Observable<CartItem> {

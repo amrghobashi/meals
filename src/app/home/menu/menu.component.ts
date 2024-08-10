@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ReviewComponent } from "../review/review.component";
 import { PricedComponent } from "./priced/priced.component";
 import { SubsidizedComponent } from "./subsidized/subsidized.component";
 import { TabViewModule } from 'primeng/tabview';
@@ -17,7 +16,7 @@ import { Subscription } from 'rxjs';
     standalone: true,
     templateUrl: './menu.component.html',
     styleUrl: './menu.component.scss',
-    imports: [ReviewComponent, PricedComponent, SubsidizedComponent, TabViewModule, CardModule, CartComponent,
+    imports: [PricedComponent, SubsidizedComponent, TabViewModule, CardModule, CartComponent,
         CalendarModule, DropdownModule, FormsModule]
 })
 export class MenuComponent {
@@ -56,11 +55,7 @@ export class MenuComponent {
     }
 
     filter(id: number) {
-        console.log(id)
         this.menuService.selectedMealType.next(id);
-        // this.subscription = this.menuService.selectedMealType.subscribe(id=>{
-        //     console.log(id)
-        // })
     }
 
     getMeals() {

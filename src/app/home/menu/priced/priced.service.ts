@@ -12,12 +12,12 @@ export class PricedService {
   constructor(private http: HttpClient) { }
   private API_URL = environment.API_URL;
 
-  getItemType(): Observable<MealItemType[]> {
-      return this.http.get<MealItemType[]>(this.API_URL + "priced_item_type");
+  getItemType(id: number): Observable<MealItemType[]> {
+      return this.http.get<MealItemType[]>(this.API_URL + "priced_item_type?meal_type_id=" + id);
   }
 
-  getMealItems(): Observable<Item[]> {
-      return this.http.get<Item[]>(this.API_URL + "priced_meals");
+  getMealItems(id: number): Observable<Item[]> {
+      return this.http.get<Item[]>(this.API_URL + "priced_meals?meal_type_id=" + id);
   }
 
   getOneItem(id: number) {

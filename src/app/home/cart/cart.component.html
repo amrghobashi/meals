@@ -1,5 +1,5 @@
 <div class="cartCard">
-    <p-card  subheader={{hallName}} >
+    <p-card  subheader={{hallName}}>
         <ng-template pTemplate="header">
             <p class="cartHeader" style="font-size: 30px;">CART 
                 <span style="color: white; margin-top: 0.3rem; font-size: 23px;" class="material-icons">shopping_cart</span>
@@ -8,6 +8,7 @@
         <div style="max-height: 25rem; overflow-y: auto;">
             <div>
                 <p style="text-align: left; font-size: larger;">Low-Priced Items </p>
+                <p *ngIf="!subsidizedItemsCart?.length">Your cart is empty</p>
                 <div *ngFor="let item of subsidizedItemsCart" 
                     style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
                     <p-inputNumber
@@ -42,6 +43,7 @@
             </div>
             <div>
                 <p style="text-align: left; font-size: larger;">Priced Items  </p>
+                <p *ngIf="!pricedItemsCart?.length">Your cart is empty</p>
                 <div *ngFor="let item of pricedItemsCart" style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
                     <p-inputNumber
                     (onInput)="onChangePricedCart(item ,$event)"
@@ -86,7 +88,7 @@
                     </p>
                 </div>
                 <hr>
-                <p-button label="CHECKOUT" severity="success" [style]="{'width': '100%','font-size': 'larger'}" />
+                <p-button label="CHECKOUT {{ mealTypeName }}" severity="success" [style]="{'width': '100%','font-size': 'larger'}" />
         </ng-template>
     </p-card>
 </div>

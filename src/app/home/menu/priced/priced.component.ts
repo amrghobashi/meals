@@ -9,6 +9,7 @@ import { Item, MealItemType } from '../../../Models/item';
 import { Subscription } from 'rxjs';
 import { CartItem } from '../../../Models/cart';
 import { CartService } from '../../cart/cart.service';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-priced',
@@ -27,21 +28,27 @@ export class PricedComponent {
   countItems!: number;
 
 
-  constructor(private pricedService: PricedService, private cartService: CartService) {}
+  constructor(private pricedService: PricedService, private cartService: CartService, private menuService: MenuService) {}
 
   ngOnInit() {
-    this.getMealItemType();
-    this.getMealItem();
+    this.getMealType();
   }
 
-  getMealItemType() {
-    this.subscription = this.pricedService.getItemType().subscribe(itemTypes => {
+  getMealType() {
+    this.subscription = this.menuService.selectedMealType.subscribe(id => {
+      this.getMealItemType(id);
+      this.getMealItem(id);
+    })
+  }
+
+  getMealItemType(id: number) {
+    this.subscription = this.pricedService.getItemType(id).subscribe(itemTypes => {
       this.itemTypes = itemTypes;
     })
   }
 
-  getMealItem() {
-    this.subscription = this.pricedService.getMealItems().subscribe(items => {
+  getMealItem(id: number) {
+    this.subscription = this.pricedService.getMealItems(id).subscribe(items => {
       this.items = items;
     })
   }
@@ -69,6 +76,7 @@ export class PricedComponent {
         "item_type_id": item.item_type_id,
         "name": item.item_name,
         "price": Number(item.price),
+        "meal_type_id": item.meal_type_id,
         "count": 1
       }
       this.addToCart(this.cartItem);
@@ -92,9 +100,9 @@ export class PricedComponent {
     })
   }
 
-  updateCart(){
-    this.cartService.getItems("priced_cart").subscribe();
-  }
+  // updateCart(){
+  //   this.cartService.getItems("priced_cart").subscribe();
+  // }
   
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

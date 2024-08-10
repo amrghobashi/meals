@@ -3,6 +3,7 @@ export interface CartItem{
     item_type_id?: number;
     name?: string;
     price?: number;
+    meal_type_id?: number;
     count?: number;
 }
 
