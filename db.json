@@ -400,8 +400,8 @@
       "id": "10",
       "item_type_id": "1",
       "name": "French toast",
-      "price": 1,
-      "count": 1
+      "price": 2,
+      "count": 2
     }
   ],
   "priced_cart": [
@@ -416,8 +416,8 @@
       "id": "3",
       "item_type_id": "1",
       "name": "Beef Stroganoff Plate ",
-      "price": 800,
-      "count": 4
+      "price": 400,
+      "count": 2
     }
   ],
   "total_cart": [
