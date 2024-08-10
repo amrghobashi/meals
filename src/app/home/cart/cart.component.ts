@@ -7,6 +7,9 @@ import { CartService } from './cart.service';
 import { Subscription } from 'rxjs';
 import { CartItem } from '../../Models/cart';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { loadCart } from '../../_store/Cart/Cart.Actions';
+import { getCartList } from '../../_store/Cart/Cart.Selector';
 
 @Component({
   selector: 'app-cart',
@@ -24,13 +27,25 @@ export class CartComponent {
   itemValue: number = 10;
   totalPrice: number = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private store: Store) { }
 
   ngOnInit() {
-    this.getSubsidizedItems();
+    // this.getSubsidizedItems();
+    this.getSubsidizedNgrx();
     this.getPricedItems();
     this.getSubsidizedCartUpdate();
     this.getPricedCartUpdate();
+  }
+
+  getSubsidizedNgrx() {
+    this.store.dispatch(loadCart());
+    this.store.select(getCartList).subscribe(items => {
+      this.subsidizedItemsCart = items;
+    })
+
+    this.subscription = this.cartService.getItems("subsidized_cart").subscribe(items => {
+      this.subsidizedItemsCart = items;
+    })
   }
 
   getSubsidizedItems() {

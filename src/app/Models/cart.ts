@@ -6,6 +6,11 @@ export interface CartItem{
     count?: number;
 }
 
+export interface CartList{
+    list: CartItem[];
+    error_message: string;
+}
+
 export interface CartTotalPrice{
     id: number;
     value?: string;
