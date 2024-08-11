@@ -83,3 +83,30 @@ body,
         max-width: 100%;
     }
 }
+
+@media (min-width: 800px) {
+    .largeScreen {
+        display: block;
+    }
+    .smallScreen {
+        display: none;
+    }
+    .menuScreen {
+        width: 70%;
+    }
+}
+
+@media (max-width: 799px) {
+    .largeScreen {
+        display: none;
+    }
+    .smallScreen {
+        display: block;
+    }
+    .menuScreen {
+        width: 98%;
+    }
+    .cartCard {
+        margin: auto !important;
+    }
+}

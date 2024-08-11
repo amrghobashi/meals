@@ -8,6 +8,7 @@
     color: white;
     height: 3rem;
     margin: auto;
+    text-align: center;
 }
 
 .cartBtn {
@@ -53,4 +54,8 @@
 .cartCard {
     width: 94%;
     margin-left: 2.5rem;
+}
+
+.p-card .p-card-subtitle {
+    text-align: center !important;
 }

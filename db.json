@@ -29,20 +29,6 @@
       "img": "https://media.istockphoto.com/id/1411811140/photo/grilled-chicken-fillet-with-herbs-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=CA0lpbHWhvY0-MbunyHwOvlQA-Qv0hkW2Wa6OknjVdg="
     },
     {
-      "id": "4",
-      "item_name": "Red Pasta",
-      "desc": "Delicious red sauce pasta",
-      "quantity": "1",
-      "reserved_quantity": "0",
-      "item_type_id": "5",
-      "item_type_name": "Carbohydrates",
-      "meal_type_id": "2",
-      "max_choice": "1",
-      "subsidized_menu_id": "349",
-      "price": "10",
-      "img": "https://media.istockphoto.com/id/1053864102/photo/pasta-with-meat-tomato-sauce-and-vegetables.jpg?s=612x612&w=0&k=20&c=yxWKQCIzhVsTPdnK_N5mkODwtIKfepRTvXdPN_ffPkY="
-    },
-    {
       "id": "5",
       "item_name": "White Rice ",
       "desc": "Plain white rice plate",
@@ -99,20 +85,6 @@
       "img": "https://assets.epicurious.com/photos/57b35f844924889253994109/master/pass/scrambled-eggs.jpg"
     },
     {
-      "id": "9",
-      "item_name": "Scotch Eggs",
-      "desc": "Soft boiled eggs wrapped in seasoned ground beef and fried",
-      "quantity": "1",
-      "reserved_quantity": "0",
-      "item_type_id": "2",
-      "item_type_name": "",
-      "meal_type_id": "1",
-      "max_choice": "1",
-      "subsidized_menu_id": "349",
-      "price": "5",
-      "img": "https://hips.hearstapps.com/hmg-prod/images/scotch-egg-recipe-1622141225.jpg?crop=0.811xw:0.813xh;0.121xw,0&resize=980:*"
-    },
-    {
       "id": "10",
       "item_name": "French toast",
       "desc": "Sliced bread soaked in beaten eggs and often milk or cream",
@@ -155,20 +127,6 @@
       "img": "https://media.istockphoto.com/id/535489242/photo/pouring-milk-in-the-glass-on-the-background-of-nature.jpg?s=612x612&w=0&k=20&c=bqBubtMFs_kv9z0OZVLunl3NFTb_XAVKiw8v1hO1T80="
     },
     {
-      "id": "13",
-      "item_name": "Greek yogurt",
-      "desc": "A protein-rich dairy yogurt",
-      "quantity": "1",
-      "reserved_quantity": "0",
-      "item_type_id": "7",
-      "item_type_name": "",
-      "meal_type_id": "3",
-      "max_choice": "1",
-      "subsidized_menu_id": "349",
-      "price": "3",
-      "img": "https://media.istockphoto.com/id/515777808/photo/yogurt.jpg?s=612x612&w=0&k=20&c=1xNf2q0hmndqAbqyTUUv6F_GbBhhCZkGHbiOERz91LE="
-    },
-    {
       "id": "14",
       "item_name": "Green Salad",
       "desc": "A plate of mix fresh vegetables",
@@ -195,20 +153,6 @@
       "subsidized_menu_id": "349",
       "price": "3",
       "img": "https://t4.ftcdn.net/jpg/08/12/97/53/360_F_812975354_CcynZxcLLrhooMvZJ5OGyu5OcKPqNHTb.jpg"
-    },
-    {
-      "id": "16",
-      "item_name": "Garlic bread",
-      "desc": "Sliced garlic bread with herbs",
-      "quantity": "1",
-      "reserved_quantity": "0",
-      "item_type_id": "1",
-      "item_type_name": "",
-      "meal_type_id": "1",
-      "max_choice": "1",
-      "subsidized_menu_id": "349",
-      "price": "1",
-      "img": "https://media.istockphoto.com/id/547046390/photo/garlic-bread.jpg?s=612x612&w=0&k=20&c=oArNgkbjjPKlToDnBhL7xNwU4_eJLPTaLbAlIuunHDY="
     }
   ],
   "subsidized_item_type": [
@@ -273,7 +217,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "20",
+      "price": "75",
       "img": "https://media.istockphoto.com/id/681773572/photo/grilled-chicken-leg-with-potato-for-garnish-wooden-background.jpg?s=612x612&w=0&k=20&c=yoiuGiHufqI2_kYvlfcOHWXwl8_HKBKEF9WiO7iGiVY="
     },
     {
@@ -287,7 +231,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "25",
+      "price": "80",
       "img": "https://media.istockphoto.com/id/1411811140/photo/grilled-chicken-fillet-with-herbs-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=CA0lpbHWhvY0-MbunyHwOvlQA-Qv0hkW2Wa6OknjVdg="
     },
     {
@@ -301,7 +245,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "10",
+      "price": "65",
       "img": "https://media.istockphoto.com/id/1053864102/photo/pasta-with-meat-tomato-sauce-and-vegetables.jpg?s=612x612&w=0&k=20&c=yxWKQCIzhVsTPdnK_N5mkODwtIKfepRTvXdPN_ffPkY="
     },
     {
@@ -315,7 +259,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "8",
+      "price": "50",
       "img": "https://media.istockphoto.com/id/1165114438/photo/boiled-rice-in-a-bowl.jpg?s=612x612&w=0&k=20&c=LpGzGTOja3SzDkpCgPB2UccfUGYyYbBmMyDkZLGu1gk="
     },
     {
@@ -329,7 +273,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "1",
+      "price": "4",
       "img": "https://t3.ftcdn.net/jpg/01/38/83/62/360_F_138836201_jTWikUxvbpE6aCOoSmpAHXCbznoBJqTt.jpg"
     },
     {
@@ -343,7 +287,7 @@
       "meal_type_id": "2",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "2",
+      "price": "7",
       "img": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w="
     },
     {
@@ -357,7 +301,7 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "3",
+      "price": "18",
       "img": "https://assets.epicurious.com/photos/57b35f844924889253994109/master/pass/scrambled-eggs.jpg"
     },
     {
@@ -371,7 +315,7 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "5",
+      "price": "22",
       "img": "https://hips.hearstapps.com/hmg-prod/images/scotch-egg-recipe-1622141225.jpg?crop=0.811xw:0.813xh;0.121xw,0&resize=980:*"
     },
     {
@@ -385,7 +329,7 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "1",
+      "price": "7",
       "img": "https://www.shutterstock.com/image-photo/homemade-stack-tasty-french-toast-260nw-2463922921.jpg"
     },
     {
@@ -399,7 +343,7 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "2",
+      "price": "7",
       "img": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w="
     },
     {
@@ -413,7 +357,7 @@
       "meal_type_id": "3",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "1",
+      "price": "8",
       "img": "https://media.istockphoto.com/id/535489242/photo/pouring-milk-in-the-glass-on-the-background-of-nature.jpg?s=612x612&w=0&k=20&c=bqBubtMFs_kv9z0OZVLunl3NFTb_XAVKiw8v1hO1T80="
     },
     {
@@ -427,7 +371,7 @@
       "meal_type_id": "3",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "3",
+      "price": "10",
       "img": "https://media.istockphoto.com/id/515777808/photo/yogurt.jpg?s=612x612&w=0&k=20&c=1xNf2q0hmndqAbqyTUUv6F_GbBhhCZkGHbiOERz91LE="
     },
     {
@@ -441,7 +385,7 @@
       "meal_type_id": "3",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "3",
+      "price": "20",
       "img": "https://media.istockphoto.com/id/528424672/photo/garden-salad.jpg?s=612x612&w=0&k=20&c=ebCO5Fo0H50LrrLFQrP_5lcqHqVLgZ056CJxQSG-45c="
     },
     {
@@ -455,7 +399,7 @@
       "meal_type_id": "3",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "3",
+      "price": "15",
       "img": "https://t4.ftcdn.net/jpg/08/12/97/53/360_F_812975354_CcynZxcLLrhooMvZJ5OGyu5OcKPqNHTb.jpg"
     },
     {
@@ -469,8 +413,22 @@
       "meal_type_id": "1",
       "max_choice": "1",
       "subsidized_menu_id": "349",
-      "price": "1",
+      "price": "8",
       "img": "https://media.istockphoto.com/id/547046390/photo/garlic-bread.jpg?s=612x612&w=0&k=20&c=oArNgkbjjPKlToDnBhL7xNwU4_eJLPTaLbAlIuunHDY="
+    },
+    {
+      "id": "17",
+      "item_name": "Beef Stroganoff Plate ",
+      "desc": "Slices of beef cooked in demi glace sauce",
+      "quantity": "1",
+      "reserved_quantity": "0",
+      "item_type_id": "4",
+      "item_type_name": "Beef & Chicken",
+      "meal_type_id": "2",
+      "max_choice": "1",
+      "subsidized_menu_id": "349",
+      "price": "200",
+      "img": "assets/beef.jpg"
     }
   ],
   "priced_item_type": [
@@ -517,14 +475,6 @@
   ],
   "subsidized_cart": [
     {
-      "id": "10",
-      "item_type_id": "1",
-      "name": "French toast",
-      "meal_type_id": "1",
-      "price": 2,
-      "count": 2
-    },
-    {
       "id": "1",
       "item_type_id": "4",
       "name": "Quarter Chicken Thigh",
@@ -541,37 +491,61 @@
       "count": 1
     },
     {
-      "id": "14",
-      "item_type_id": "8",
-      "name": "Green Salad",
-      "meal_type_id": "3",
-      "price": 3,
-      "count": 1
-    }
-  ],
-  "priced_cart": [
-    {
-      "id": "1",
-      "item_type_id": "4",
-      "name": "Quarter Chicken Thigh",
-      "price": 20,
-      "meal_type_id": "2",
-      "count": 1
-    },
-    {
-      "id": "12",
-      "item_type_id": "7",
-      "name": "Milk",
-      "price": 1,
-      "meal_type_id": "3",
+      "id": "11",
+      "item_type_id": "3",
+      "name": "Apple",
+      "meal_type_id": "1",
+      "price": 2,
       "count": 1
     },
     {
       "id": "10",
       "item_type_id": "1",
       "name": "French toast",
-      "price": 1,
       "meal_type_id": "1",
+      "price": 2,
+      "count": 2
+    },
+    {
+      "id": "9",
+      "item_type_id": "2",
+      "name": "Scotch Eggs",
+      "meal_type_id": "1",
+      "price": 5,
+      "count": 1
+    },
+    {
+      "id": "5",
+      "item_type_id": "5",
+      "name": "White Rice ",
+      "meal_type_id": "2",
+      "price": 8,
+      "count": 1
+    },
+    {
+      "id": "6",
+      "item_type_id": "6",
+      "name": "Banana",
+      "meal_type_id": "2",
+      "price": 1,
+      "count": 1
+    }
+  ],
+  "priced_cart": [
+    {
+      "id": "8",
+      "item_type_id": "2",
+      "name": "Scrambled eggs",
+      "price": 18,
+      "meal_type_id": "1",
+      "count": 1
+    },
+    {
+      "id": "17",
+      "item_type_id": "4",
+      "name": "Beef Stroganoff Plate ",
+      "price": 200,
+      "meal_type_id": "2",
       "count": 1
     }
   ],

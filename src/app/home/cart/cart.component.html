@@ -8,7 +8,7 @@
         <div style="max-height: 25rem; overflow-y: auto;">
             <div>
                 <p style="text-align: left; font-size: larger;">Low-Priced Items </p>
-                <p *ngIf="!subsidizedItemsCart?.length">Your cart is empty</p>
+                <p *ngIf="!subsidizedItemsCart?.length" style="text-align: center;">Your Low-Priced cart is empty</p>
                 <div *ngFor="let item of subsidizedItemsCart" 
                     style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
                     <p-inputNumber
@@ -43,7 +43,7 @@
             </div>
             <div>
                 <p style="text-align: left; font-size: larger;">Priced Items  </p>
-                <p *ngIf="!pricedItemsCart?.length">Your cart is empty</p>
+                <p *ngIf="!pricedItemsCart?.length" style="text-align: center;">Your Priced cart is empty</p>
                 <div *ngFor="let item of pricedItemsCart" style="text-align: left; display: flex; background-color: #efefef; margin-bottom: 0.3rem;" >
                     <p-inputNumber
                     (onInput)="onChangePricedCart(item ,$event)"

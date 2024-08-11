@@ -1,19 +1,11 @@
 <div class="layout-topbar">
-    <!-- <p-menubar class="layout-topbar" [model]="items">
-        <ng-template pTemplate="start">
-            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
-        </ng-template>
-        <ng-template pTemplate="end">
-            <input type="text" pInputText placeholder="Search" class="w-full" />
-        </ng-template>
-    </p-menubar> -->
-    
-    <!-- <span class="example-spacer"></span> -->
     <p class="title">meals </p>
     <span style="color: white;" class="material-icons">restaurant_menu</span>
     <span class="spacer"></span>
-    <p>
-        <a class="menu-items">Wallet</a>
+    <p class="smallScreen">
+        <!-- <a class="menu-items" (click)="showDialog()">Cart</a> -->
+        <span style="color: white; margin-top: 0.3rem; font-size: 23px; width: 3rem;"
+            (click)="showDialog()" class="material-icons">shopping_cart</span>
     </p>
     <p>
         <a class="menu-items">Orders</a>
@@ -21,5 +13,17 @@
     <p>
         <a class="menu-items">Account</a>
     </p>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-dialog 
+        [(visible)]="visible" 
+        [modal]="true"
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+        [style]="{ width: '50vw' }" 
+        [draggable]="false" 
+        [resizable]="false">
+            <app-cart></app-cart>
+    </p-dialog>
 </div>
 <br><br><br><br>
