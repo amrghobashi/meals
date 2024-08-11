@@ -523,6 +523,30 @@
       "meal_type_id": "1",
       "price": 2,
       "count": 2
+    },
+    {
+      "id": "1",
+      "item_type_id": "4",
+      "name": "Quarter Chicken Thigh",
+      "meal_type_id": "2",
+      "price": 20,
+      "count": 1
+    },
+    {
+      "id": "13",
+      "item_type_id": "7",
+      "name": "Greek yogurt",
+      "meal_type_id": "3",
+      "price": 3,
+      "count": 1
+    },
+    {
+      "id": "14",
+      "item_type_id": "8",
+      "name": "Green Salad",
+      "meal_type_id": "3",
+      "price": 3,
+      "count": 1
     }
   ],
   "priced_cart": [

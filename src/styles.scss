@@ -41,7 +41,7 @@ body,
 
 .tableCard {
     text-align: center;
-    display: flex;
+    display: block;
     margin: auto;
     margin-top: 0%;
     max-width: 90% !important;
@@ -49,7 +49,7 @@ body,
 
 .p-card .p-card-content {
     padding: 1rem 0;
-    display: flex;
+    display: grid;
 }
 
 .p-button.p-button-icon-only {
